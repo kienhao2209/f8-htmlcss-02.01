@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Poppins, sans-serif;
+}
+
+:root {
+    --primary-color: #1ebfc1;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.btn {
+    width: 186px;
+    height: 68px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 1.6rem;
+}
+
+.main-content {
+    width: 1170px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    margin-top: 52px;
+}
+
+.header.fixed {
+    position: sticky;
+    top: 52px;
+}
+
+.header .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .icon {
+    cursor: pointer;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 0 39px;
+}
+
+.header nav a {
+    color: #2f3a3b;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.header nav li.active a {
+    font-weight: 600;
+}
+
+.header .sign-in-btn {
+    color: #494949;
+    font-weight: 400;
+}
+
+.header .sign-in-btn:hover {
+    color: var(--primary-color);
+}
+
+.header .sign-up-btn {
+    margin-left: 24px;
+    padding: 12px 23px;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid #1ebfc1;
+    transition: ease 0.3s;
+}
+
+.header .sign-up-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
