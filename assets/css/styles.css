@@ -17,33 +17,50 @@ body {
 
 /* Common */
 a {
+    display: inline-block;
     text-decoration: none;
 }
 
 .btn {
     width: 186px;
     height: 68px;
+    line-height: 68px;
     text-align: center;
     border-radius: 14px;
     font-size: 1.6rem;
 }
 
+.btn:hover {
+    opacity: 0.9;
+}
+
+.desc.lv1 {
+    color: #767e7e;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
 .main-content {
     width: 1170px;
+    max-width: calc(100% - 48px);
     margin: auto;
 }
 
 /* Header */
 .header {
-    margin-top: 52px;
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
 .header.fixed {
     position: sticky;
-    top: 52px;
+    top: 0;
+    z-index: 1;
 }
 
 .header .body {
+    padding: 12px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,6 +85,13 @@ a {
     font-weight: 600;
 }
 
+.header .sign-in-btn,
+.header .sign-up-btn {
+    width: 108px;
+    height: 48px;
+    line-height: 48px;
+}
+
 .header .sign-in-btn {
     color: #494949;
     font-weight: 400;
@@ -79,7 +103,6 @@ a {
 
 .header .sign-up-btn {
     margin-left: 24px;
-    padding: 12px 23px;
     color: var(--primary-color);
     font-weight: 600;
     border-radius: 6px;
@@ -90,4 +113,116 @@ a {
 .header .sign-up-btn:hover {
     background-color: var(--primary-color);
     color: #fff;
+}
+
+/* Hero */
+.hero {
+    margin-top: 50px;
+}
+
+.hero .body {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Hero left */
+
+.hero .content {
+    width: 39%;
+    padding: 93px 0;
+}
+
+.hero .slogan {
+    color: #767e7e;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.hero .heading.lv1 {
+    margin-top: 18px;
+    color: #0d1111;
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.16;
+}
+
+.hero .desc {
+    margin: 46px 84px 0 0;
+    line-height: 1.77;
+}
+
+.hero .cta-group .btn {
+    margin-top: 52px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: #1ebfc1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero .cta-group .play {
+    margin-left: 50px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Hero right */
+.hero .media-block {
+    position: relative;
+}
+
+.hero .media-block .img {
+    padding-left: 65px;
+    width: 576px;
+    height: 631px;
+    object-fit: cover;
+}
+
+.hero-courses {
+    position: absolute;
+    left: 0;
+    top: 149px;
+    padding: 17px 25px 18px;
+    display: flex;
+    width: 157px;
+    align-items: center;
+    border-radius: 18px;
+    background: #fefefd;
+    box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero-courses .icon-book {
+    position: relative;
+    width: 36px;
+    height: 40px;
+    background-color: #ff8282;
+    border-radius: 6px 4px 4px 6px;
+}
+
+.hero-courses .icon-book::after {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.hero-courses .info {
+    margin-left: 16px;
+    color: #0d1111;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hero-courses .info .count {
+    margin-top: 6px;
 }
