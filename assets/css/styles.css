@@ -50,7 +50,6 @@ a {
 .header {
     margin-top: 40px;
     background-color: #fff;
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
 }
 
 .header.fixed {
@@ -118,6 +117,7 @@ a {
 /* Hero */
 .hero {
     margin-top: 50px;
+    padding-bottom: 79px;
 }
 
 .hero .body {
@@ -168,11 +168,14 @@ a {
     border: none;
     background: #fff;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
 }
 
 /* Hero right */
 .hero .media-block {
     position: relative;
+    top: 0;
+    right: 0;
 }
 
 .hero .media-block .img {
@@ -182,17 +185,29 @@ a {
     object-fit: cover;
 }
 
-.hero-courses {
+.hero-courses,
+.hero-students,
+.hero-schedules {
     position: absolute;
-    left: 0;
-    top: 149px;
-    padding: 17px 25px 18px;
+
     display: flex;
-    width: 157px;
     align-items: center;
     border-radius: 18px;
     background: #fefefd;
     box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero .label {
+    color: #0d1111;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hero-courses {
+    left: 0;
+    top: 149px;
+    padding: 17px 25px 18px;
+    width: 157px;
 }
 
 .hero-courses .icon-book {
@@ -225,4 +240,100 @@ a {
 
 .hero-courses .info .count {
     margin-top: 6px;
+}
+
+.hero-schedules {
+    left: 0;
+    bottom: 46px;
+    width: 124px;
+    padding: 16px 25px 19px;
+    flex-direction: column;
+    border-radius: 24px;
+}
+
+.hero-schedules .range-list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px 0;
+}
+
+.hero-schedules .range-item {
+    position: relative;
+    width: 74px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #edf1f5;
+}
+
+.hero-schedules .range-item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 6px;
+    border-radius: 6px;
+    background-color: #fb9899;
+}
+
+.hero-schedules .range-item:first-child::after {
+    width: 50%;
+}
+
+.hero-schedules .range-item:nth-child(2)::after {
+    width: 60%;
+}
+
+.hero-schedules .range-item:nth-child(3)::after {
+    width: 40%;
+}
+
+.hero-schedules .range-short {
+    width: 26px;
+}
+
+/* Hero students */
+.hero-students {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    right: 45px;
+    bottom: 46px;
+    padding: 17px 33px;
+    width: 207px;
+    border-radius: 24px;
+    box-shadow: 0 12px 80px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero-students .students-list {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-students img:first-of-type {
+    margin-left: 0;
+}
+
+.hero-students img,
+.hero-students .students-more {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.hero-students img {
+    margin-left: -8px;
+}
+
+.hero-students .students-more {
+    margin-left: -8px;
+    display: inline-block;
+    line-height: 33px;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #1ebfc1;
 }
