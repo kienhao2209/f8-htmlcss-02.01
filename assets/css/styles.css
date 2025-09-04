@@ -627,3 +627,26 @@ a {
     top: 374px;
     left: 569px;
 }
+
+/* Action */
+.call-to-action {
+    margin-top: 206px;
+    padding: 76px 135px 88px;
+    background: #def6f5;
+}
+
+.call-to-action .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.call-to-action .desc {
+    margin-top: 18px;
+}
+
+.call-to-action .btn {
+    margin-right: 154px;
+    background: #2ac9bf;
+    color: #fff;
+}
