@@ -81,7 +81,7 @@ a {
 .header.fixed {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header .body {
@@ -216,7 +216,6 @@ a {
 .hero-students,
 .hero-schedules {
     position: absolute;
-
     display: flex;
     align-items: center;
     border-radius: 18px;
@@ -231,7 +230,7 @@ a {
 }
 
 .hero-courses {
-    left: 0;
+    left: 25px;
     top: 149px;
     padding: 17px 25px 18px;
     width: 157px;
@@ -479,8 +478,15 @@ a {
     font-weight: 700;
 }
 
-.courses-item .desc {
+.courses-item .desc:nth-child(2) {
     margin-top: 16px;
+}
+
+.courses-item .desc:nth-child(3) {
+    margin-top: 10px;
+}
+
+.courses-item .desc {
     color: #767e7e;
     font-size: 1.4rem;
     font-weight: 400;
@@ -522,6 +528,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.stats .heading.lv2 {
+    font-size: 6.2rem;
 }
 
 .stats .desc {
@@ -685,13 +695,17 @@ a {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
-    gap: 16px 0;
+    gap: 30px 0;
 }
 
 .footer li a {
     color: #535353;
     font-size: 1.6rem;
     font-weight: 400;
+}
+
+.footer li a:hover {
+    text-decoration: underline;
 }
 
 .footer li a:last-child {
